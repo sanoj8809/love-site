@@ -132,10 +132,10 @@ button{
 
 <body>
 
+<!-- Background Music -->
 <audio id="bgMusic" loop>
-  <source src="love.mp3" type="audio/mpeg">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
 </audio>
-
 
 <div class="card">
 
@@ -182,7 +182,7 @@ let messages = [
     "Please think once 🥺",
     "Dil se pooch raha hoon 💖",
     "Sirf tumhare liye banaya 😅",
-    "Kitna bhav khaogi 🙈",
+    "beautiful man jao kitna code krwaogi 🙈",
     "Ab toh yes hi banta hai 😍"
 ];
 
@@ -236,13 +236,12 @@ function closePopup(){
 function toggleMusic(){
     let music = document.getElementById("bgMusic");
 
-    if(music.paused){
+    if(!musicOn){
         music.play();
+        musicOn = true;
     }else{
         music.pause();
-    }
-}
-
+        musicOn = false;
     }
 }
 
@@ -250,7 +249,3 @@ function toggleMusic(){
 
 </body>
 </html>
-
-
-
-
